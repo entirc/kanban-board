@@ -4,8 +4,9 @@ import List from './List'
 import AddList from './AddList'
 import styles from './Board.module.styl'
 import { getBoard, getLists } from '../selectors'
-import { DragDropContext } from 'react-dnd';
-import HTML5Backend from 'react-dnd-html5-backend';
+
+import { DragDropContext } from 'react-dnd'
+import HTML5Backend from 'react-dnd-html5-backend'
 
 class Board extends Component {
   render() {

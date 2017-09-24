@@ -13,7 +13,10 @@ const card = (state = {}, action) => {
       }
       return newCard
     case types.CLONE_CARD:
-      return action.card
+      return { 
+        ...action.card,
+        order: state.length
+      }
     default:
       return state
   }  

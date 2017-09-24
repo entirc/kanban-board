@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import styles from './AddCard.module.styl'
 import * as actions from '../actions'
 
 class AddCard extends Component {
+  static propTypes = {
+    listId: PropTypes.string.isRequired
+  }
+
   addCard = event => {
     event.preventDefault()
     const title = prompt('Card title')
