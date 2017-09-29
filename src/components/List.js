@@ -40,20 +40,20 @@ class List extends Component {
       <li key={card.id}>
         <Card listId={list.id} cardId={card.id} />
       </li>
-    ));
+    ))
     return connectDropTarget(
       <div className={className}>
         <div className={styles.header}>{list.title}</div>
-        <ul>{listCards}</ul>
-        <AddCard listId={list.id} />
+        <div className={styles.listCards}>{listCards}</div>
+        <div><AddCard listId={list.id} /></div>
       </div>
-    );
+    )
   }
 }
 
 const mapStateToProps = (state, ownProps) => ({
   list: getList(state, ownProps.listId),
   cards: getCards(state, ownProps.listId)
-});
+})
 
 export default connect(mapStateToProps)(DropTarget(constants.CARD, listTargetSpec, collect)(List))
