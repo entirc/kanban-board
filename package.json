@@ -17,8 +17,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "timeout react-scripts build -t 15s",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "timeout-cli": "^0.3.2"
   }
 }
