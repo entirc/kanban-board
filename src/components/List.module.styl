@@ -1,17 +1,14 @@
 .list
   background-color #E2E4E6
   color #333
+  display grid
+  grid-template-rows repeat(4, auto)
   font-family "Helvetica Neue", Arial, Helvetica, sans-serif
   padding 10px
-  float left
-  width 270px
-  margin 0 10px
   border-radius 3px
 
-  & ul
-    overflow-x hidden
-    overflow-y auto
-    max-height 85vh
+.listCards
+  list-style none
 
 .droppingIn
   composes list
@@ -21,3 +18,5 @@
   font-weight bold
   line-height 18px
   font-size 14px
+  word-wrap break-word
+  width 10vw

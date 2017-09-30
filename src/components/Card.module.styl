@@ -1,4 +1,6 @@
 .card
+  display grid
+  grid-template-columns auto 10vw
   background-color white
   border-radius 3px
   padding 6px 8px
@@ -14,11 +16,13 @@
 
 .header
   font-size 14px
+  justify-self start
   margin-bottom 2px
-  display inline-block
+  width 100px
+  overflow hidden
 
 .buttons
-  float right
+  justify-self end
 
   & a
     color red
