@@ -17,7 +17,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "timeout react-scripts build -t 15s",
+    "build": "timeout react-scripts build -t 1m ; echo 'Done'",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
